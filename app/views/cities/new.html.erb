@@ -1,0 +1,6 @@
+<%= form_with local: true, method: "post" ,url:"/cities/create" do |form| %>
+  <%= form.text_field :city %>
+  <%= form.text_field :landmark %>
+  <%= form.text_field :population %>
+  <%= form.submit %>
+<% end %>

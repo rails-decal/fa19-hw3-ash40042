@@ -1,0 +1,24 @@
+
+<% if @cities.empty? %>
+  <h1> Create a city  by going to /cities/create </h1>
+<% elsif params.has_key?(:city) and @cities.key?(params[:city]) %>
+
+
+    <h1> Name: <%= @temp.name%> </h1>
+    <p> Landmark: <%= @temp.landmark%> </p>
+    <p> Population: <%= @temp.population%> </p>
+    <p> Temperature: <%= @temp.weather%> </p>
+
+<% else %>
+
+<% @cities.each do |city| %>
+  <h1> Name: <%= city.name%> </h1>
+  <p> Landmark: <%= city.landmark%> </p>
+  <p> Population: <%= city.population%> </p>
+  <p> Temperature: <%= city.weather%> </p>
+
+<% end %>
+
+
+
+<% end %>
