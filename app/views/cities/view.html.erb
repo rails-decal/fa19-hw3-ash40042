@@ -1,9 +1,9 @@
 
 <% if @cities.empty? %>
   <h1> Create a city  by going to /cities/create </h1>
-<% elsif params.has_key?(:city) and @cities.key?(params[:city]) %>
+<% elsif params.has_key?(:city) and @temp.nil? == FALSE  %>
 
-
+    
     <h1> Name: <%= @temp.name%> </h1>
     <p> Landmark: <%= @temp.landmark%> </p>
     <p> Population: <%= @temp.population%> </p>

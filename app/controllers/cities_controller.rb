@@ -4,8 +4,9 @@ class CitiesController < ApplicationController
 
   def view
     if(params.has_key?(:city))
-      @temp = City.all[params[:city]]
-      @cities = City.all
+
+      @cities = City.all.values
+      @temp = City.all[params[:city].to_sym]
     else
       @cities = City.all.values
 
